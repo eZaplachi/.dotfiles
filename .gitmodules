@@ -1,0 +1,3 @@
+[submodule "nvim/.config/nvim/lua/nvim-config"]
+	path = nvim/.config/nvim/lua/nvim-config
+	url = https://github.com/eZaplachi/nvim-config
