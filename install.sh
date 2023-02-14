@@ -44,9 +44,10 @@ command -v fish | sudo tee -a /etc/shells
 cp -f nix-env.fish/conf.d/nix-env.fish fish/.config/fish/conf.d
 
 # Stow dotfiles
+stow bash
+stow fish
 stow git
 stow nvim
-stow fish
 stow tmux
 
 # Neovim setup
