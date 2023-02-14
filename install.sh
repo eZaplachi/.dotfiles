@@ -1,8 +1,8 @@
 # Install and source nix
 git clone https://github.com/eZaplachi/nix
-sudo mv -i nix ~/etc
+sudo cp -r nix ~/etc
 
-mkdir -m 0755 /nix && chown root /nix
+mkdir -m 0755 ~/nix && chown root ~/nix
 curl -L https://nixos.org/nix/install | sudo sh
 
 . ~/.nix-profile/etc/profile.d/nix.sh
