@@ -1,3 +1,6 @@
+# Add nix configuration
+sudo mkdir ~/etc/nix
+sudo cp ~/.dotfiles/nix.config ~/etc/nix
 # Install and source nix
 cd ~
 
