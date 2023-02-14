@@ -1,4 +1,6 @@
 # Install and source nix
+cd ~
+
 curl -L https://nixos.org/nix/install | sudo sh
 
 . ~/.nix-profile/etc/profile.d/nix.sh
@@ -39,6 +41,7 @@ command -v fish | sudo tee -a /etc/shells
 
 
 # Fish shell setup
+cd ~/.dotfiles
 cp -f nix-env.fish/conf.d/nix-env.fish fish/.config/fish/conf.d
 
 # Stow dotfiles
