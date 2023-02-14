@@ -4,8 +4,19 @@ Personal Dotfiles managed with GNU-Stow
 
 Contains install script for Nix package manager
 
+don't forget to download git submodules!!
 
-Run from home ('~') directory
+'''
+git submodule init
+git submodule update
+'''
+
+Run from home ('~') directory using:
+
+'''
+cd ~
+./.dotfiles/install.sh
+'''
 
 
 
