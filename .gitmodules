@@ -1,3 +1,6 @@
 [submodule "nvim/.config/nvim/lua/nvim-config"]
 	path = nvim/.config/nvim/lua/nvim-config
 	url = https://github.com/eZaplachi/nvim-config
+[submodule "nix-env.fish"]
+	path = nix-env.fish
+	url = https://github.com/lilyball/nix-env.fish

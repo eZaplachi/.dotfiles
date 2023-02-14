@@ -10,31 +10,40 @@ nix-env -iA \
 	nixpkgs.fish \
 	nixpkgs.git \
   nixpkgs.gcc \
-  nixpkgs.gnumake \
-	nixpkgs.neovim \
-	nixpkgs.nodejs \
-	nixpkgs.nodePackages.pnpm \
-	nixpkgs.python3Full \
-	nixpkgs.python3Packages.pip \
-	nixpkgs.rustup \
-  nixpkgs.go \
   nixpkgs.lua \
   nixpkgs.luajit \
   nixpkgs.luajitPackages.luarocks-nix \
+  nixpkgs.nodejs \
+	nixpkgs.nodePackages.pnpm \
   nixpkgs.php82 \
   nixpkgs.php82Packages.composer \
+  nixpkgs.python3Full \
+	nixpkgs.python3Packages.pip \
+	nixpkgs.rustup \
+  nixpkgs.go \
   nixpkgs.zulu \
 	nixpkgs.tmux \
+	nixpkgs.bat \
 	nixpkgs.fzf \
 	nixpkgs.ripgrep \
   nixpkgs.fd \
-	nixpkgs.bat \
+  nixpkgs.gnumake \
 	nixpkgs.stow \
 	nixpkgs.gh \
 	nixpkgs.unzip \
+	nixpkgs.neovim \
 	nixpkgs.universal-ctags
 
-# Stow sotfiles
+# Set switch to shell
+command -v fish | sudo tee -a /etc/shells
+#sudo sed s/required/sufficient/g -i /etc/pam.d/chsh # PAM auth failed workaround
+#sudo chsh -s $(which fish) $USER
+
+
+# Fish shell setup
+cp -f nix-env.fish/conf.d/nix-env.fish fish/.config/fish/conf.d
+
+# Stow dotfiles
 stow git
 stow nvim
 stow fish
@@ -49,14 +58,6 @@ nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 cd ~/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim
 make
 cd ~
-# Set switch to shell
-command -v fish | sudo tee -a /etc/shells
-#sudo sed s/required/sufficient/g -i /etc/pam.d/chsh # PAM auth failed workaround
-#sudo chsh -s $(which fish) $USER
-
-
-# Fish shell setup
-git clone https://github.com/oh-my-fish/plugin-foreign-env.git
 
 fish
 

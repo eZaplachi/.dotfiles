@@ -1,0 +1,5 @@
+alias ls="ls -A"
+alias vim="nvim"
+alias cs="bash"
+alias ..="cd .."
+alias .~="cd ~"
