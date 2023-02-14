@@ -2,7 +2,7 @@
 git clone https://github.com/eZaplachi/nix
 sudo mv -i ./nix ~/etc/
 
-mkdir -m 0755 ~/nix && chown root ~/nix
+mkdir -m 0755 ~/nix && chown $USER ~/nix
 curl -L https://nixos.org/nix/install | sudo sh
 
 . ~/.nix-profile/etc/profile.d/nix.sh
@@ -10,26 +10,26 @@ curl -L https://nixos.org/nix/install | sudo sh
 # Install Packages
 nix-env -iA \
 	nixpkgs.fish \
-	nixpkgs.git \
-  nixpkgs.gcc \
-  nixpkgs.lua \
-  nixpkgs.luajit \
-  nixpkgs.luajitPackages.luarocks-nix \
-  nixpkgs.nodejs \
+        nixpkgs.git \
+        nixpkgs.gcc \
+        nixpkgs.lua \
+        nixpkgs.luajit \
+        nixpkgs.luajitPackages.luarocks-nix \
+        nixpkgs.nodejs \
 	nixpkgs.nodePackages.pnpm \
-  nixpkgs.php82 \
-  nixpkgs.php82Packages.composer \
-  nixpkgs.python3Full \
+        nixpkgs.php82 \
+        nixpkgs.php82Packages.composer \
+        nixpkgs.python3Full \
 	nixpkgs.python3Packages.pip \
 	nixpkgs.rustup \
-  nixpkgs.go \
-  nixpkgs.zulu \
+        nixpkgs.go \
+        nixpkgs.zulu \
 	nixpkgs.tmux \
 	nixpkgs.bat \
 	nixpkgs.fzf \
 	nixpkgs.ripgrep \
-  nixpkgs.fd \
-  nixpkgs.gnumake \
+        nixpkgs.fd \
+        nixpkgs.gnumake \
 	nixpkgs.stow \
 	nixpkgs.gh \
 	nixpkgs.unzip \
