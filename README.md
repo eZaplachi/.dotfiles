@@ -5,7 +5,8 @@ Personal Dotfiles managed with GNU-Stow
 Contains install script for Nix package manager
 
 
-Can't be used with the default profile
+Run from home ('~') directory
+
 
 
 References:

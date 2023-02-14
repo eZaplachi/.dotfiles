@@ -1,9 +1,7 @@
 # Add nix configuration
-sudo mkdir ~/etc/nix
-sudo cp ~/.dotfiles/nix.config ~/etc/nix
+sudo mkdir /etc/nix/
+sudo cp ~/.dotfiles/nix.conf ~/etc/nix/nix.conf
 # Install and source nix
-cd ~
-
 curl -L https://nixos.org/nix/install | sudo sh
 
 . ~/.nix-profile/etc/profile.d/nix.sh
