@@ -16,6 +16,7 @@ nix-env -iA \
         nixpkgs.luajitPackages.luarocks-nix \
         nixpkgs.nodejs \
 	nixpkgs.nodePackages.pnpm \
+        nixpkgs.deno \
         nixpkgs.php82 \
         nixpkgs.php82Packages.composer \
         nixpkgs.python3Full \
