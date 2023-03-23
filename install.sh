@@ -30,6 +30,7 @@ nix-env -iA \
 	nixpkgs.ripgrep \
         nixpkgs.fd \
         nixpkgs.gnumake \
+        nixpkgs.xdg-utils \
 	nixpkgs.stow \
 	nixpkgs.gh \
 	nixpkgs.unzip \
@@ -49,17 +50,18 @@ cp -f nix-env.fish/conf.d/nix-env.fish fish/.config/fish/conf.d
 # Stow dotfiles
 stow bash
 stow fish
+:q
+:qa
 stow git
 stow nvim
 stow tmux
 
 # Neovim setup
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
- ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-
+@ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 
-cd ~/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim
+cd ~/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim || return
 make
 cd ~
 
