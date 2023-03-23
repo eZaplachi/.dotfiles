@@ -4,8 +4,8 @@
 # Install and source nix
 # curl -L https://nixos.org/nix/install | sudo sh
 
-# . ~/.nix-profile/etc/profile.d/nix.sh
 bash <(curl -L https://nixos.org/nix/install)
+. ~/.nix-profile/etc/profile.d/nix.sh
 
 # Install Packages
 nix-env -iA \
