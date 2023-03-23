@@ -1,12 +1,12 @@
 # Personal Dotfiles
 
-> - Managed with GNU-Stow 
+> - Managed with GNU-Stow
 > - Install script for Nix package manager included
 
-*Don't forget to download git submodules!!*
+_Don't forget to download git submodules!!_
 
 ```
-git clone https://github.com/eZaplachi/.dotfiles.git --recurse-submodules
+cd ~ && git clone https://github.com/eZaplachi/.dotfiles.git --recurse-submodules && ./.dotfiles/install.sh
 ```
 
 > or, if you cloned without the flag:
@@ -15,14 +15,6 @@ git clone https://github.com/eZaplachi/.dotfiles.git --recurse-submodules
 > git submodule update --init --recursive
 > ```
 
-Run from home ('~') directory using:
-
-```
-cd ~ && ./.dotfiles/install.sh
-```
-
-
-
 ### References:
 
 - https://github.com/lilyball/nix-env.fish
@@ -30,4 +22,4 @@ cd ~ && ./.dotfiles/install.sh
 - https://github.com/jakewies/.dotfiles
 
 - [Build A Portable Development Environment With Nix Package manager](https://www.youtube.com/watch?v=70YMTHAZyy4)
-> by [Jake Wiesler](https://www.youtube.com/@jakewies)
+  > by [Jake Wiesler](https://www.youtube.com/@jakewies)
