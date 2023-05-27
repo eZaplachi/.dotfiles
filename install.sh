@@ -12,7 +12,6 @@ nix-env -iA \
 	nixpkgs.fish \
 	nixpkgs.git \
 	nixpkgs.gcc \
-	nixpkgs.lua \
 	nixpkgs.luajit \
 	nixpkgs.luajitPackages.luarocks-nix \
 	nixpkgs.nodejs \
