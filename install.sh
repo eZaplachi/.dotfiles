@@ -34,7 +34,6 @@ nix-env -iA \
 	nixpkgs.stow \
 	nixpkgs.gh \
 	nixpkgs.unzip \
-	nixpkgs.neovim \
 	nixpkgs.universal-ctags
 
 # Set switch to shell
